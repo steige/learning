@@ -1,0 +1,58 @@
+
+<html>
+  <head>
+    <title>Da Coop</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  </head>
+  <body>
+    <h1>Hen House</h1>
+    <img src="{{ url_for('video_feed') }}">
+    <div><button id="up">Up</button><br>
+    <button id="perch">Perch</button><br>
+    <button id="left">Left</button>
+    <button id="box">Boxes</button>
+    <button id="right">Right</button><br>
+    <button id="door">Door</button></div>
+    <button id="down">Down</button>
+  </body>
+
+  <script>
+    $(document).ready(function(){
+      $("#box").click(function(){
+        $.ajax({
+          url: "box"
+        });
+      });
+      $("#door").click(function(){
+        $.ajax({
+          url: "door"
+        });
+      });
+      $("#up").click(function(){
+        $.ajax({
+          url: "up"
+        });
+      });
+      $("#down").click(function(){
+        $.ajax({
+          url: "down"
+        });
+      });
+      $("#right").click(function(){
+        $.ajax({
+          url: "right"
+        });
+      });
+      $("#left").click(function(){
+        $.ajax({
+          url: "left"
+        });
+      });
+      $("#perch").click(function(){
+        $.ajax({
+          url: "perch"
+        });
+      });
+    });
+  </script>
+</html>
